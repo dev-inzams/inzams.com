@@ -6,7 +6,7 @@
                 <div class="col">
                     <!-- Start Header Logo -->
                     <a href="{{ route('home') }}" class="header-logo">
-                        <img src="assets/images/logo.png" alt="">
+                        <img src="{{asset('assets/images/logo.png')}}" alt="">
                     </a>
                     <!-- End Header Logo -->
                 </div>

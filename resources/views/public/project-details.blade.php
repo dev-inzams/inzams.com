@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Project Details - Grow Up Your Position With Inzams')
+@section('title', $project->title. '- Grow Up Your Position With Inzams')
 @section('description', 'Hi there, I am Inzams, and I am an experienced WordPress Web Font end Developer, with 2+ years of
 experience. My first goal is to satisfy the client 100%. I will work according to all your requirements.')
 @section('main')
@@ -14,10 +14,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="title">Project Details</h2>
+                        <h2 class="title">{{ __($project->title) }}</h2>
                         <ul class="breadcrumb-link">
-                            <li><a href="service-list.html">Projects</a></li>
-                            <li class="active" aria-current="page">Project Details</li>
+                            <li><a href="{{ route('projects') }}">Projects</a></li>
+                            <li class="active" aria-current="page">{{ __($project->slug) }}</li>
                         </ul>
                     </div>
                 </div>
@@ -36,72 +36,17 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Project Content Section -->
                     <div class="project-content-section pos-relative">
                         <div class="project-hero-image">
-                            <img src="assets/images/project/project-details-hero-img.webp" alt="">
+                            <img src="{{ asset('uploads/projects/').'/'.$project->image }}" alt="{{  __($project->meta_title)  }}">
                         </div>
 
                         <div class="row">
                             <div class="col-lg-8">
                                 <!-- Start Section Content -->
                                 <div class="default-content-style pos-relative">
-                                    <span class="section-tag">Givest - Non Profit Website</span>
+                                    <span class="section-tag">{{  __($project->title)  }}</span>
                                     <h2 class="title">Givest is a non profit and fund rising website.</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                        indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                        indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it typesetting, remaining essentially unchanged.</p>
-
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                        indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it typesetting, remaining essentially unchanged.</p>
-
-                                    <h3 class="sub-title">How to complete this?</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
-
-                                    <ul class="content-list-item content-list-with-icon">
-                                        <li>
-                                            <div class="left">
-                                                <div class="icon">
-                                                    <i class="icofont-bulb-alt"></i>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <h4 class="list-title">Idea Generate</h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
-                                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                    typesetting, remaining essentially unchanged.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left">
-                                                <div class="icon">
-                                                    <i class="icofont-ruler-pencil-alt-2"></i>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <h4 class="list-title">Reasearch & Sketching</h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
-                                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                    typesetting, remaining essentially unchanged.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left">
-                                                <div class="icon">
-                                                    <i class="icofont-airplane"></i>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <h4 class="list-title">Launced Project</h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
-                                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                    typesetting, remaining essentially unchanged.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-
+                                    <p>{{__($project->description)}}</p>
+                                    <img src="{{ asset('uploads/projects/').'/'.$project->full_image }}" alt="">
                                     <h3 class="sub-title">Project result and summery</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
@@ -115,32 +60,32 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <ul class="project-sidebar-list-item">
                                         <!-- Start Project Single Box -->
                                         <li class="project-sidebar-single-box">
-                                            <h6 class="title-text">Project Name:</h6>
-                                            <span class="text">Givest</span>
+                                            <h6 class="title-text">Project Type:</h6>
+                                            <span class="text">{{__($project->projectCategory->title)}}</span>
                                         </li>
                                         <!-- End Project Single Box -->
                                         <!-- Start Project Single Box -->
                                         <li class="project-sidebar-single-box">
                                             <h6 class="title-text">Clients:</h6>
-                                            <span class="text">Reatha Alcorn</span>
+                                            <span class="text">{{__($project->clients)}}</span>
                                         </li>
                                         <!-- End Project Single Box -->
                                         <!-- Start Project Single Box -->
                                         <li class="project-sidebar-single-box">
                                             <h6 class="title-text">Budget:</h6>
-                                            <span class="text">$890.00</span>
+                                            <span class="text">{{__($project->budget)}}</span>
                                         </li>
                                         <!-- End Project Single Box -->
                                         <!-- Start Project Single Box -->
                                         <li class="project-sidebar-single-box">
                                             <h6 class="title-text">Duration:</h6>
-                                            <span class="text">25 days</span>
+                                            <span class="text">{{__($project->duration)}}</span>
                                         </li>
                                         <!-- End Project Single Box -->
                                         <!-- Start Project Single Box -->
                                         <li class="project-sidebar-single-box">
                                             <h6 class="title-text">Date:</h6>
-                                            <span class="text">09 Feb, 2021</span>
+                                            <span class="text">{{__($project->delivery_date)}}</span>
                                         </li>
                                         <!-- End Project Single Box -->
                                     </ul>

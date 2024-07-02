@@ -13,14 +13,14 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                 <div class="row">
                     <div class="col-xxl-7">
                         <div class="hero-content">
-                            <h3 class="title-big">Hello! I’m</h3>
-                            <h2 class="title-large">Mirta <span class="shape-mark">Akins</span></h2>
-                            <p>UI/UX Designer specializing in Shopify & Webflow.</p>
+                            <h3 class="title-big">Hello! I’m Developer</h3>
+                            <h2 class="title-large"><span class="shape-mark">InZam'S</span></h2>
+                            <p>Wordpress And Laravel Developer.</p>
 
                             <a href="#" class="btn btn-xl btn-outline-one icon-space-left">Get Resume <i class="fa-solid fa-file"></i></a>
 
                             <div class="video-link">
-                                <a class="wave-btn" href="https://youtu.be/MKjhBO2xQzg" data-autoplay="true" data-vbtype="video">
+                                <a class="wave-btn" href="https://youtu.be/9sY242MOqm8?si=sflJh735lRJ9-Tm2" data-autoplay="true" data-vbtype="video">
 
                                     <div class="ripple"><i class="fa-solid fa-video"></i></div>
                                 </a>
@@ -46,14 +46,14 @@ experience. My first goal is to satisfy the client 100%. I will work according t
 
             <div class="hero-portrait">
                 <div class="image">
-                    <img class="img-fluid" src="{{asset('assets/images/portrait-hero.webp')}}" alt="">
+                    <img class="img-fluid" src="{{asset('assets/images/inzams-main.png')}}" alt="">
 
                     <div class="image-half-round-shape"></div>
                     <div class="social-link">
-                        <a href="https://www.example.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.example.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.example.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.example.com" target="_blank"><i class="fa-solid fa-user"></i></a>
+                        <a href="https://www.facebook.com/developerinzams" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/c/developerinzams" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/inzams/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.inzams.com" target="_blank"><i class="fa-solid fa-user"></i></a>
                     </div>
                 </div>
 
@@ -295,93 +295,33 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <!-- Start Project Box Single Item -->
+                            @foreach ($projects as $project )
+
                             <div class="project-box-single-item swiper-slide">
                                 <div class="img-box">
                                     <div class="bg-overlay"></div>
                                     <div class="bg-image">
-                                        <img src="assets/images/project/project-slider-img-1.webp" alt="">
+                                        <img src="{{ asset('uploads/projects/').'/'.$project->full_image }}" alt="{{__($project->title)}}}">
                                     </div>
                                     <div class="image">
-                                        <img src="assets/images/project/project-slider-img-1.webp" alt="">
+                                        <img src="{{ asset('uploads/projects/').'/'.$project->full_image }}" alt="{{__($project->title)}}}">
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="project-details.html">Givest - Non Profit PSD Template</a></h4>
+                                    <h4 class="title"><a href="{{route('project-details', $project->slug)}}">{{__($project->title)}}</a></h4>
 
                                     <ul class="catagory-nav-item">
-                                        <li><a href="">Chairty</a></li>
-                                        <li><a href="">Fund Rising</a></li>
-                                        <li><a href="">Non Profit</a></li>
+                                        <li>{{__($project->clients)}}</li>
+                                        <li>{{__($project->projectCategory->title)}}</li>
+                                        <li>{{__($project->duration)}}</li>
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Project Box Single Item -->
-                            <!-- Start Project Box Single Item -->
-                            <div class="project-box-single-item swiper-slide">
-                                <div class="img-box">
-                                    <div class="bg-overlay"></div>
-                                    <div class="bg-image">
-                                        <img src="assets/images/project/project-slider-img-2.webp" alt="">
-                                    </div>
-                                    <div class="image">
-                                        <img src="assets/images/project/project-slider-img-2.webp" alt="">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="project-details.html">Musion - Gardening Website Template</a></h4>
 
-                                    <ul class="catagory-nav-item">
-                                        <li><a href="">Gardeining</a></li>
-                                        <li><a href="">Landscaping</a></li>
-                                        <li><a href="">Greem</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @endforeach
                             <!-- End Project Box Single Item -->
-                            <!-- Start Project Box Single Item -->
-                            <div class="project-box-single-item swiper-slide">
-                                <div class="img-box">
-                                    <div class="bg-overlay"></div>
-                                    <div class="bg-image">
-                                        <img src="assets/images/project/project-slider-img-3.webp" alt="">
-                                    </div>
-                                    <div class="image">
-                                        <img src="assets/images/project/project-slider-img-3.webp" alt="">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="project-details.html">SEOLLY - SEO Marketing & Digital Agency</a></h4>
 
-                                    <ul class="catagory-nav-item">
-                                        <li><a href="">Chairty</a></li>
-                                        <li><a href="">Fund Rising</a></li>
-                                        <li><a href="">Non Profit</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Project Box Single Item -->
-                            <!-- Start Project Box Single Item -->
-                            <div class="project-box-single-item swiper-slide">
-                                <div class="img-box">
-                                    <div class="bg-overlay"></div>
-                                    <div class="bg-image">
-                                        <img src="assets/images/project/project-slider-img-4.webp" alt="">
-                                    </div>
-                                    <div class="image">
-                                        <img src="assets/images/project/project-slider-img-4.webp" alt="">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="project-details.html">Virtuf - Creative Agency Bootstrap 5 Template</a></h4>
 
-                                    <ul class="catagory-nav-item">
-                                        <li><a href="">Gardeining</a></li>
-                                        <li><a href="">Landscaping</a></li>
-                                        <li><a href="">Greem</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Project Box Single Item -->
                         </div>
                     </div>
                 </div>

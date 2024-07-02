@@ -1,15 +1,6 @@
 @extends('layouts.app')
 @section('main')
 <x-auth-session-status class="mb-4" :status="session('status')" />
-<div class="container-fluid position-relative d-flex p-0">
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
 
     <!-- Sign In Start -->
     <div class="container-fluid">
@@ -43,7 +34,7 @@
                             <a href="{{ route('password.request') }}">Forgot Password</a>
                         @endif
                     </div>
-                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                    <button type="submit" class="btn btn-primary w-100 mb-4">Sign In</button>
 
                     </form>
                 </div>
