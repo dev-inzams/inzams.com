@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('blog_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('meta_title');
+            $table->longText('description')->nullable();
+            $table->string('meta_description')->nullable();
+            $table->string('slug')->unique();
+
+            $table->string('image')->nullable();
+
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

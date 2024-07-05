@@ -1,7 +1,6 @@
 @extends('layout.app')
-@section('title', 'Project Details - Grow Up Your Position With Inzams')
-@section('description', 'Hi there, I am Inzams, and I am an experienced WordPress Web Font end Developer, with 2+ years of
-experience. My first goal is to satisfy the client 100%. I will work according to all your requirements.')
+@section('title', $blog->title .'- Grow Up Your Position With Inzams')
+@section('description', $blog->meta_description)
 @section('main')
 
 
@@ -14,10 +13,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="title">Project Details</h2>
+                        <h2 class="title">{{__($blog->title)}}</h2>
                         <ul class="breadcrumb-link">
-                            <li><a href="service-list.html">Projects</a></li>
-                            <li class="active" aria-current="page">Project Details</li>
+                            <li><a href="{{route('blogs')}}">Blog</a></li>
+                            <li class="active" aria-current="page">{{__($blog->slug)}}</li>
                         </ul>
                     </div>
                 </div>
@@ -27,136 +26,257 @@ experience. My first goal is to satisfy the client 100%. I will work according t
 </div>
 <!-- ...::: End Breadcrumb Section :::... -->
 
-<!-- .....:::::: Start Project Details Section :::::.... -->
-<div class="project-details-section section-gap-tb-165">
-    <div class="project-details-box">
+<!-- ...::: Start Blog List Section :::... -->
+<div class="blog-details-section section-gap-tb-165">
+    <div class="blog-details-box">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Start Project Content Section -->
-                    <div class="project-content-section pos-relative">
-                        <div class="project-hero-image">
-                            <img src="assets/images/project/project-details-hero-img.webp" alt="">
-                        </div>
+            <div class="row flex-lg-row-reverse flex-column-reverse">
+                <div class="col-xl-4 col-lg-5">
+                    <!-- Start Sidebar Widget Area-->
+                    <div class="sidebar-widget-area">
 
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <!-- Start Section Content -->
-                                <div class="default-content-style pos-relative">
-                                    <span class="section-tag">Givest - Non Profit Website</span>
-                                    <h2 class="title">Givest is a non profit and fund rising website.</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                        indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                      <!-- Start Sidebar Widget Single Item - Search Widgets -->
+                      <div class="sidebar-widget-single-area search-widgets">
+                          <form class="search-widgets-box" action="#" method="post">
+                              <input type="search" placeholder="Search here">
+                              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                          </form>
+                      </div>
+                      <!-- End Sidebar Widget Single Item - Search Widgets -->
 
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                        indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it typesetting, remaining essentially unchanged.</p>
+                      <!-- Start Sidebar Widget Single Item - Catagory Widgets -->
+                      <div class="sidebar-widget-single-area catagory-widgets">
+                          <h3 class="title">Category</h3>
+                          <ul class="widget-nav-list catagory-item-list">
+                            @foreach ($blogCategories as $blogCategory)
+                              <li><a href="#"><span class="text">{{__($blogCategory->title)}}</span><span class="icon"><i class="fa-solid fa-angles-right"></i></span></a></li>
+                            @endforeach
+                          </ul>
+                      </div>
+                      <!-- End Sidebar Widget Single Item - Catagory Widgets -->
 
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                        indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it typesetting, remaining essentially unchanged.</p>
+                      <!-- Start Sidebar Widget Single Item - Resume Widgets -->
+                      <div class="sidebar-widget-single-area resume-widgets">
+                          <h3 class="title">Resources</h3>
+                          <ul class="widget-nav-list resume-item-list">
+                              <li><a href="{{ $blog->resources }}"><span class="text">Download</span><span class="icon"><i class="fa-solid fa-cloud-arrow-down"></i></span></a></li>
+                          </ul>
+                      </div>
+                      <!-- End Sidebar Widget Single Item - Resume Widgets -->
 
-                                    <h3 class="sub-title">How to complete this?</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
+                      <!-- Start Sidebar Widget Single Item - Recent Post Widgets -->
+                      <div class="sidebar-widget-single-area recentpost-widget">
+                          <h3 class="title">Recent Post</h3>
+                          <ul class="recent-blog-item-list">
+                            @foreach ($recentBlogs as $recentBlog)
 
-                                    <ul class="content-list-item content-list-with-icon">
-                                        <li>
-                                            <div class="left">
-                                                <div class="icon">
-                                                    <i class="icofont-bulb-alt"></i>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <h4 class="list-title">Idea Generate</h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
-                                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                    typesetting, remaining essentially unchanged.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left">
-                                                <div class="icon">
-                                                    <i class="icofont-ruler-pencil-alt-2"></i>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <h4 class="list-title">Reasearch & Sketching</h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
-                                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                    typesetting, remaining essentially unchanged.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left">
-                                                <div class="icon">
-                                                    <i class="icofont-airplane"></i>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <h4 class="list-title">Launced Project</h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
-                                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                    typesetting, remaining essentially unchanged.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                              <li>
+                                  <a href="blog-details-sidebar-left.html" class="image">
+                                      <img src="{{ asset('uploads/blogs/').'/'.$recentBlog->image }}" alt="">
+                                  </a>
+                                  <div class="content">
+                                      <h4 class="title"><a href="blog-details-sidebar-left.html">{{__($recentBlog->title)}}</a></h4>
+                                      <div class="post-meta">
+                                          <a href="#" class="date icon-space-right"><i class="fa-solid fa-calendar-days"></i>{{$recentBlog->created_at}}</a>
+                                      </div>
+                                  </div>
+                              </li>
 
-                                    <h3 class="sub-title">Project result and summery</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
-                                </div>
-                                <!-- End Section Content -->
-                            </div>
-                            <div class="col-xl-3 col-lg-4 offset-xl-1">
-                                <div class="project-sidebar">
-                                    <h3 class="title">Information</h3>
-                                    <!-- Start Project Sidebar Item -->
-                                    <ul class="project-sidebar-list-item">
-                                        <!-- Start Project Single Box -->
-                                        <li class="project-sidebar-single-box">
-                                            <h6 class="title-text">Project Name:</h6>
-                                            <span class="text">Givest</span>
-                                        </li>
-                                        <!-- End Project Single Box -->
-                                        <!-- Start Project Single Box -->
-                                        <li class="project-sidebar-single-box">
-                                            <h6 class="title-text">Clients:</h6>
-                                            <span class="text">Reatha Alcorn</span>
-                                        </li>
-                                        <!-- End Project Single Box -->
-                                        <!-- Start Project Single Box -->
-                                        <li class="project-sidebar-single-box">
-                                            <h6 class="title-text">Budget:</h6>
-                                            <span class="text">$890.00</span>
-                                        </li>
-                                        <!-- End Project Single Box -->
-                                        <!-- Start Project Single Box -->
-                                        <li class="project-sidebar-single-box">
-                                            <h6 class="title-text">Duration:</h6>
-                                            <span class="text">25 days</span>
-                                        </li>
-                                        <!-- End Project Single Box -->
-                                        <!-- Start Project Single Box -->
-                                        <li class="project-sidebar-single-box">
-                                            <h6 class="title-text">Date:</h6>
-                                            <span class="text">09 Feb, 2021</span>
-                                        </li>
-                                        <!-- End Project Single Box -->
-                                    </ul>
-                                    <!-- End Project Sidebar Item -->
+                            @endforeach
+                          </ul>
+                      </div>
+                      <!-- End Sidebar Widget Single Item - Recent Post Widgets -->
+
+                      <!-- Start Sidebar Widget Single Item - Social Widgets -->
+                      <div class="sidebar-widget-single-area ">
+                          <h3 class="title">Follow Me</h3>
+                          <ul class="social-link">
+                            <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                          </ul>
+                      </div>
+                      <!-- End Sidebar Widget Single Item - Social Widgets -->
+                    </div>
+                    <!-- End Sidebar Widget Area-->
+                </div>
+                <div class="col-xl-7 col-lg-7 offset-xl-1">
+                    <!-- Start Blog Content Area -->
+                    <div class="blog-content-area">
+                        <!-- Start Section Content -->
+                        <div class="default-content-style pos-relative">
+                            <div class="content-meta">
+                                <span class="section-tag">{{__($blog->BlogCategory->title)}}</span>
+                                <div class="post-meta-2">
+                                  <span class="icon-space-right"><i class="fa-solid fa-user"></i>by {{__($blog->user->name)}}</span>
+                                  <span class="icon-space-right"><i class="fa-solid fa-calendar-days"></i>{{$blog->created_at}}</span>
                                 </div>
                             </div>
+                            <h2 class="title">{{__($blog->title)}}.</h2>
+                            <p>{{__($blog->description)}}</p>
+
                         </div>
+                        <!-- End Section Content -->
+                    </div>
+                    <!-- End Blog Content Area -->
+                    <div class="react mt-4">
+
+                        <button class="react-btn" onclick="event.preventDefault(); document.getElementById('like-form-{{ $blog->id }}').submit();">
+                            {{-- check cookie --}}
+
+                            <i class="fa-regular fa-heart"></i>Like
+                        </button>
+                        <span>If this blog helps you, then like for inspiratiom</span>
+                        <form id="like-form-{{ $blog->id }}" action="{{ route('posts.like', $blog->id) }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
 
                     </div>
-                    <!-- End Project Content Section -->
+                    <!-- Start Tag Area  -->
+                    <div class="tag-area section-mt-75">
+                        <!-- Start Tag Box -->
+                        <div class="tag-box">
+                            <div class="left">
+                                <div class="tag-list">
+                                    <h5 class="title">Tags:</h5>
+                                    <ul class="list-item">
+                                        <li><a href="#">portfolio</a></li>
+                                        <li><a href="#">charity</a></li>
+                                        <li><a href="#">personal</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <ul class="social-link">
+                                    <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Tag Box -->
+                    </div>
+                    <!--  End Tag Area  -->
+
+                    <!--  Start Comment Area  -->
+                    <div class="comment-area section-mt-75">
+                        <!-- Start Comment Box-->
+                        <div class="comment-box">
+                            <h3 class="title">Comment:</h3>
+                            <ul class="comment-list-item">
+                                <!-- Start Comment Single Item -->
+                                <li>
+                                    <div class="comment-single-item">
+                                        <div class="image"><img src="assets/images/users/user-1.jpg" alt=""></div>
+                                        <div class="content">
+                                            <div class="top">
+                                                <div class="author-meta">
+                                                    <h4 class="name">Felix Myers</h4>
+                                                    <span class="designation">Web Developer</span>
+                                                </div>
+                                                <button class="replay-btn icon-space-right"> <i class="icofont-reply"></i> Reply</button>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="text">
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting and
+                                                        has been the industry's standard dummy text ever since the 1500s, whe
+                                                        took a galley of type and scrambled.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Comment Single Item -->
+                                <!-- Start Comment Single Item -->
+                                <li>
+                                    <div class="comment-single-item">
+                                        <div class="image"><img src="assets/images/users/user-2.jpg" alt=""></div>
+                                        <div class="content">
+                                            <div class="top">
+                                                <div class="author-meta">
+                                                    <h4 class="name">Francisco Bond</h4>
+                                                    <span class="designation">Web Developer</span>
+                                                </div>
+                                                <button class="replay-btn icon-space-right"> <i class="icofont-reply"></i> Reply</button>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="text">
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting and
+                                                        has been the industry's standard dummy text ever since the 1500s, whe
+                                                        took a galley of type and scrambled.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- has Reply -->
+                                    <div class="has-reply">
+                                        <div class="comment-single-item">
+                                            <div class="image"><img src="assets/images/users/user-3.jpg" alt=""></div>
+                                            <div class="content">
+                                                <div class="top">
+                                                    <div class="author-meta">
+                                                        <h4 class="name">Rochell Duckett</h4>
+                                                        <span class="designation">Web Developer</span>
+                                                    </div>
+                                                    <button class="replay-btn icon-space-right"> <i class="icofont-reply"></i> Reply</button>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="text">
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting and
+                                                            has been the industry's standard dummy text ever since the 1500s, whe
+                                                            took a galley of type and scrambled.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Comment Single Item -->
+                            </ul>
+                        </div>
+                        <!-- End Comment Box-->
+                    </div>
+                    <!-- ...::: End Comment Area :::... -->
+
+                    <!-- Start Comment Form Area -->
+                    <div class="comment-form-area section-mt-75">
+                        <!-- Start Comment Form Box -->
+                        <div class="comment-form-box">
+                            <h3 class="title">Leave a comment:</h3>
+                            <form class="default-form" action="#" method="post">
+                                <div class="row mb-n6">
+                                    <div class="col-xl-6 mb-6">
+                                        <div class="default-form-group">
+                                            <input type="text" placeholder="Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 mb-6">
+                                        <div class="default-form-group">
+                                            <input type="email" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 mb-6">
+                                        <div class="default-form-group">
+                                            <textarea placeholder="Comment" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-6">
+                                        <div class="default-form-group">
+                                            <button type="submit" class="btn btn-lg btn-outline-one">Submit Comment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End Comment Form Box -->
+                    </div>
+                    <!--  End Comment Form Area  -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- .....:::::: End Project Details Section :::::.... -->
+<!-- ...::: End Blog List Section :::... -->
 
 
 @endsection

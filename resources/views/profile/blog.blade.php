@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Project')
+@section('title', 'Blog - Grow Up Your Position With Inzams')
 @section('main')
 @include('auth.components.sidebar')
 @include('auth.components.navbar')
@@ -7,16 +7,17 @@
 <div class="container-fluid pt-4 px-4">
     {{-- error message get from controller  --}}
     <p> {{ session('success') }} </p>
+    <p> {{ session('error') }} </p>
     {{-- add project modal --}}
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content bg-secondary rounded p-4">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add New Project</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Add New Blog</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form method="POST" action="{{ route('project.store') }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('blog.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                   <label for="title" class="col-form-label">Title:</label>
@@ -34,28 +35,16 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-6">
                         <div class="mb-3">
-                            <label for="clients" class="col-form-label">Clients:</label>
-                            <input name="clients" type="text" class="form-control" id="clients">
+                            <label for="resources" class="col-form-label">Resources:</label>
+                            <input name="resources" type="text" class="form-control" id="resources">
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6">
                         <div class="mb-3">
-                            <label for="budget" class="col-form-label">Budget:</label>
-                            <input name="budget" type="text" class="form-control" id="budget">
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="duration" class="col-form-label">Duration:</label>
-                            <input name="duration" type="text" class="form-control" id="duration">
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="delivery_date" class="col-form-label">Delivery Date:</label>
-                            <input name="delivery_date" type="date" class="form-control" id="delivery_date">
+                            <label for="heart" class="col-form-label">Custom Heart:</label>
+                            <input name="heart" type="number" class="form-control" id="heart">
                         </div>
                     </div>
                 </div>
@@ -65,10 +54,6 @@
                   <input name="image" type="file" class="form-control bg-dark" id="image">
                 </div>
 
-                <div class="mb-3">
-                  <label for="full_image" class="col-form-label">Full Image:</label>
-                  <input name="full_image" type="file" class="form-control bg-dark" id="full_image">
-                </div>
 
                 <div class="mb-3">
                   <label for="description" class="col-form-label">Description:</label>
@@ -86,11 +71,11 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="project_category_id" class="col-form-label">Category:</label>
-                  <select id="project_category_id" name="project_category_id" class="form-select" aria-label="Default select example">
+                  <label for="blog_category_id" class="col-form-label">Category:</label>
+                  <select id="blog_category_id" name="blog_category_id" class="form-select" aria-label="Default select example">
                     <option selected>Select Category</option>
-                    @foreach ($projectsCategories as $projectCategory)
-                      <option value="{{ $projectCategory->id }}">{{ $projectCategory->title }}</option>
+                    @foreach ($blogsCategories as $blogCategory)
+                      <option value="{{ $blogCategory->id }}">{{ $blogCategory->title }}</option>
                     @endforeach
                   </select>
                 </div>
@@ -105,8 +90,9 @@
         </div>
     </div>
 
+
     {{-- add category modal --}}
-    <div class="modal fade" id="addProjectCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content bg-secondary rounded p-4">
             <div class="modal-header">
@@ -114,7 +100,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form method="POST" action="{{ route('project.category.store') }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('blog.category.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                   <label for="title" class="col-form-label">Title:</label>
@@ -163,14 +149,14 @@
         <div class="col-sm-12 col-xl-6">
             <div class="bg-secondary rounded p-4">
                 <div class="align-items-center justify-content-between mb-4">
-                    <h2>{{__('All Projects')}}</h2>
+                    <h2>{{__('All Blog')}}</h2>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-xl-6">
             <div class="bg-secondary rounded p-4 text-end">
                 <div class="align-items-center justify-content-between mb-4 text-end">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProjectCategory" data-bs-whatever="@mdo">{{__('Add New Category')}}</button>
+                    <button type="button" class="btn btn-primary ml-3" data-bs-toggle="modal" data-bs-target="#addCategory" data-bs-whatever="@mdo">{{__('Add Category')}}</button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{__('Add New Project')}}</button>
                 </div>
             </div>
@@ -192,15 +178,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($projects as $project )
+                    @foreach ($blogs as $blog )
 
                     <tr>
                         <th scope="row">1</th>
-                        <td>{{__($project->title)}}</td>
-                        <td>{{__($project->ProjectCategory->title)}}</td>
-                        <td>{{$project->updated_at}}</td>
-                        <td>{{__($project->user->name)}}</td>
-                        <td><a href="{{ route('project.delete', $project->id) }}" class="btn btn-danger">{{__('Delete')}}</a></td>
+                        <td>{{__($blog->title)}}</td>
+                        <td>{{__($blog->BlogCategory->title)}}</td>
+                        <td>{{$blog->updated_at}}</td>
+                        <td>{{__($blog->user->name)}}</td>
+                        <td><a href="{{ route('blog.delete', $blog->id) }}" class="btn btn-danger">{{__('Delete')}}</a></td>
                     </tr>
 
                     @endforeach

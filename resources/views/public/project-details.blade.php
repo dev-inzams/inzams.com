@@ -1,7 +1,6 @@
 @extends('layout.app')
 @section('title', $project->title. '- Grow Up Your Position With Inzams')
-@section('description', 'Hi there, I am Inzams, and I am an experienced WordPress Web Font end Developer, with 2+ years of
-experience. My first goal is to satisfy the client 100%. I will work according to all your requirements.')
+@section('description', $project->meta_description)
 @section('main')
 
 
