@@ -15,8 +15,8 @@
                     <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                         <i class="fa fa-chart-line fa-3x text-primary"></i>
                         <div class="ms-3">
-                            <p class="mb-2">Today Sale</p>
-                            <h6 class="mb-0">$1234</h6>
+                            <p class="mb-2">Subscriber</p>
+                            <h6 class="mb-0">000{{ $totalsubscriber }}</h6>
                         </div>
                     </div>
                 </div>
@@ -24,17 +24,17 @@
                     <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                         <i class="fa fa-chart-bar fa-3x text-primary"></i>
                         <div class="ms-3">
-                            <p class="mb-2">Total Sale</p>
-                            <h6 class="mb-0">$1234</h6>
+                            <p class="mb-2">Blogs</p>
+                            <h6 class="mb-0">{{$totalblogs}}</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-xl-3">
                     <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                        <i class="fa fa-chart-area fa-3x text-primary"></i>
+                        <i class="fa fa-comment fa-3x text-primary"></i>
                         <div class="ms-3">
-                            <p class="mb-2">Today Revenue</p>
-                            <h6 class="mb-0">$1234</h6>
+                            <p class="mb-2">Comment</p>
+                            <h6 class="mb-0">{{$totalComment}}</h6>
                         </div>
                     </div>
                 </div>
@@ -161,46 +161,18 @@
                             <h6 class="mb-0">Messages</h6>
                             <a href="">Show All</a>
                         </div>
+                        @foreach ($comments as $comment)
                         <div class="d-flex align-items-center border-bottom py-3">
-                            <img class="rounded-circle flex-shrink-0" src="{{asset('admin/img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
+                            <img class="rounded-circle flex-shrink-0" src="{{asset('images/human-icon.png')}}" alt="" style="width: 40px; height: 40px;">
                             <div class="w-100 ms-3">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">Jhon Doe</h6>
-                                    <small>15 minutes ago</small>
+                                    <h6 class="mb-0">{{__($comment->name)}}</h6>
+                                    <small>{{\Carbon\Carbon::parse($comment->created_at)->diffForHumans()}}</small>
                                 </div>
-                                <span>Short message goes here...</span>
+                                <span>{{__($comment->comment)}}</span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center border-bottom py-3">
-                            <img class="rounded-circle flex-shrink-0" src="{{asset('admin/img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
-                            <div class="w-100 ms-3">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">Jhon Doe</h6>
-                                    <small>15 minutes ago</small>
-                                </div>
-                                <span>Short message goes here...</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center border-bottom py-3">
-                            <img class="rounded-circle flex-shrink-0" src="{{asset('admin/img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
-                            <div class="w-100 ms-3">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">Jhon Doe</h6>
-                                    <small>15 minutes ago</small>
-                                </div>
-                                <span>Short message goes here...</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center pt-3">
-                            <img class="rounded-circle flex-shrink-0" src="{{asset('admin/img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
-                            <div class="w-100 ms-3">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h6 class="mb-0">Jhon Doe</h6>
-                                    <small>15 minutes ago</small>
-                                </div>
-                                <span>Short message goes here...</span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-xl-4">

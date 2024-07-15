@@ -78,9 +78,9 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                         <div class="sidebar-widget-single-area ">
                             <h3 class="title">Follow Me</h3>
                             <ul class="social-link">
-                                <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                                <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                                <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.facebook.com/developerinzams" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/c/developerinzams" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/inzams/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                         <!-- End Sidebar Widget Single Item - Social Widgets -->
@@ -100,7 +100,8 @@ experience. My first goal is to satisfy the client 100%. I will work according t
 
                         <!-- Start Contact Form Box -->
                         <div class="contact-form-box">
-                            <form id="contact-form" class="default-form contact-form" action="https://whizthemes.com/mail-php/jaber/contact.php" method="post">
+                            <form class="default-form contact-form" action="{{route('contact.store')}}" method="post">
+                                @csrf
                                 <div class="row mb-n6">
                                     <div class="col-xl-6 mb-6">
                                         <div class="default-form-group">
@@ -127,15 +128,24 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                             <textarea name="message" placeholder="Comment" required></textarea>
                                         </div>
                                     </div>
+                                    <div class="col-xl-12 mb-6">
+                                        <div class="default-form-group">
+                                            <div class="g-recaptcha" data-sitekey="6LeN0A8qAAAAAAc8OgEofs_l0b1QvqE-3ZDo0Z4e"></div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-12 mb-6">
                                         <div class="default-form-group tex-center">
                                             <button type="submit" class="btn btn-lg btn-outline-one">Submit Message</button>
                                         </div>
                                     </div>
-                                    <p class="form-messege"></p>
+
+                                    <p class="form-messege"> {{ session('message') }} </p>
                                 </div>
                             </form>
+
                         </div>
+
                         <!-- End Contact Form Box -->
                     </div>
                 </div>

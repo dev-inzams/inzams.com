@@ -141,7 +141,7 @@ experience. My first goal is to satisfy the client 100%. I will work according t
 
 
 <!-- ...::: Start Counter Display Section :::... -->
- <div class="counter-display-section section-gap-tb-165 section-bg-2">
+<div class="counter-display-section section-gap-tb-165 section-bg-2">
     <div class="counter-display-wrapper">
         <div class="container">
             <div class="row justify-content-center justify-content-sm-start">
@@ -149,10 +149,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Counterup Single Item -->
                     <div class="counterup-single-item">
                         <div class="icon">
-                            <img src="assets/images/icon/counterup-icon-1.webp" alt="">
+                            <img src="{{asset('assets/images/icon/counterup-icon-1.webp')}}" alt="Best web developer in Bangladesh">
                         </div>
                         <div class="content">
-                            <h2 class="number"><span class="counter">2,58</span>+</h2>
+                            <h2 class="number"><span class="counter">20</span>+</h2>
                             <span class="text">Happy Clients</span>
                         </div>
                     </div>
@@ -162,10 +162,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Counterup Single Item -->
                     <div class="counterup-single-item">
                         <div class="icon">
-                            <img src="assets/images/icon/counterup-icon-2.webp" alt="">
+                            <img src="{{asset('assets/images/icon/counterup-icon-2.webp')}}" alt="Best laravel developer">
                         </div>
                         <div class="content">
-                            <h2 class="number"><span class="counter">590</span>K</h2>
+                            <h2 class="number"><span class="counter">200</span>H</h2>
                             <span class="text">Project Complete</span>
                         </div>
                     </div>
@@ -175,10 +175,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Counterup Single Item -->
                     <div class="counterup-single-item">
                         <div class="icon">
-                            <img src="assets/images/icon/counterup-icon-3.webp" alt="">
+                            <img src="{{asset('assets/images/icon/counterup-icon-3.webp')}}" alt="Laravel developer">
                         </div>
                         <div class="content">
-                            <h2 class="number"><span class="counter">28</span>+</h2>
+                            <h2 class="number"><span class="counter">3</span>+</h2>
                             <span class="text">Years of Experience</span>
                         </div>
                     </div>
@@ -187,7 +187,7 @@ experience. My first goal is to satisfy the client 100%. I will work according t
             </div>
         </div>
     </div>
- </div>
+</div>
  <!-- ...::: End Counter Display Section :::... -->
 
 <!-- ...::: Start Company Logo Display Section :::... -->
@@ -214,37 +214,17 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/1.webp" alt="">
-                                            <img src="assets/images/company-logo/1.webp" alt="">
-                                        </a>
-                                    </div>
+                                    @foreach ($companies as  $company )
+                                         <div class="company-logo-single-item swiper-slide">
+                                            <a href="{{ $company->url }}" class="image">
+                                                <img src="{{ asset('uploads/companies/').'/'.$company->image }}" alt="Wordpress expert">
+                                                <img src="{{ asset('uploads/companies/').'/'.$company->image }}" alt="wordpress expert">
+                                                <h2 class="section-tag">{{ $company->name }}</h2>
+                                            </a>
+                                        </div>
+                                        @endforeach
                                     <!-- End Company Logo Slider Single Item -->
-                                    <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/2.webp" alt="">
-                                            <img src="assets/images/company-logo/2.webp" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- End Company Logo Slider Single Item -->
-                                    <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/3.webp" alt="">
-                                            <img src="assets/images/company-logo/3.webp" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- End Company Logo Slider Single Item -->
-                                    <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/4.webp" alt="">
-                                            <img src="assets/images/company-logo/4.webp" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- End Company Logo Slider Single Item -->
+
                                 </div>
                             </div>
                         </div>

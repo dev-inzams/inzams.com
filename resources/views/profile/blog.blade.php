@@ -75,7 +75,7 @@
                   <select id="blog_category_id" name="blog_category_id" class="form-select" aria-label="Default select example">
                     <option selected>Select Category</option>
                     @foreach ($blogsCategories as $blogCategory)
-                      <option value="{{ $blogCategory->id }}">{{ $blogCategory->title }}</option>
+                      <option value="{{ $blogCategory->id}}">{{ $blogCategory->title }}</option>
                     @endforeach
                   </select>
                 </div>

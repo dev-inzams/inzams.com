@@ -259,5 +259,10 @@
      ***********************************************/
     $('body').materialScrollTop();
 
+    // if click close btn then add display none css and add class hide in subcribe modal
+    $('.btn-close').on('click', function() {
+        $('.subscribeModal').addClass('hide');
+    });
+
 
 })(jQuery);

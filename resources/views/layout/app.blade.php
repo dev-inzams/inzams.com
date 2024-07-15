@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
 
@@ -8,9 +8,11 @@
     <title>@yield('title')</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.jpg')}}" />
+
 
     <!-- CSS
     ============================================ -->
@@ -28,6 +30,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/plugins/plugins.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+
+    {{-- recaptcha --}}
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 </head>
 
@@ -70,6 +75,7 @@
     <!--Main JS (Common Activation Codes)-->
     <script src="{{asset('assets/js/main.js')}}"></script>
 
+    @stack('scripts')
 </body>
 
 </html>

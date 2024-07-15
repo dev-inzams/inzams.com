@@ -15,7 +15,7 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <div class="breadcrumb-content">
                         <h2 class="title">About Us</h2>
                         <ul class="breadcrumb-link">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ route('home')}}">Home</a></li>
                             <li class="active" aria-current="page">About</li>
                         </ul>
                     </div>
@@ -34,25 +34,22 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8 col-10 offset-1 offset-sm-2 offset-md-3 offset-lg-0">
                         <div class="video-card">
-                            <a class="wave-btn" href="https://youtu.be/MKjhBO2xQzg" data-autoplay="true" data-vbtype="video">
+                            <a class="wave-btn" href="https://youtu.be/xJLq9rVLLwM?si=uOpQZFh_zkRNKZhF" data-autoplay="true" data-vbtype="video">
                                 <div class="ripple"><i class="fa-solid fa-video"></i></div>
                             </a>
 
-                            <a href="#" class="btn btn-xl btn-outline-one icon-space-left">Get Resume <i class="icofont-download"></i></a>
+                            <a href="#" class="btn btn-xl btn-outline-one icon-space-left">Get Resume <i class="fa-solid fa-file"></i></a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-8 offset-md-2 offset-lg-0 offset-xl-1">
                         <div class="video-info-content">
-                            <h2 class="title">I’m Mirta Akins</h2>
+                            <h2 class="title">I’m InZam'S</h2>
 
                             <h3 class="sub-title">
-                                UI/UX designer specializing in
-                                shopify & webflow.
+                                Wordpress And Laravel Developer.
                             </h3>
 
-                            <p>Lorem Ipsum is simply dummy text of the printing and pesetting industry has
-                                been the industry's standard dummy text ever since the 1500s, when an unkn
-                                own printer took galley of type and scrambled.</p>
+                            <p>I am an experienced WordPress Web Font end Developer, with 2+ years of experience. My first goal is to satisfy the client 100%. I will work according to all your requirements.</p>
                         </div>
                     </div>
                 </div>
@@ -88,12 +85,12 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <li class="resume-tab-list-single-item">
                                         <div class="content">
                                             <div class="left">
-                                                <span class="year">2009 - 2010</span>
+                                                <span class="year">2020 - Present</span>
                                             </div>
                                             <div class="right">
-                                                <h3 class="title">Bachelor of Business Administration </h3>
-                                                <span class="institute-name">University of California, Berkeley</span>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been indus dard dummy text ever since the 1500 when an uniknown prnter took galley of type and scrambled make specimen book has not only five centuries the into electronic.</p>
+                                                <h3 class="title">Bachelor of Arts </h3>
+                                                <span class="institute-name">Rajshahi Collage, Rajshahi</span>
+                                                <p>I am currently studying Philosophy subject under National University of Rajshahi College. I am currently studying in second year, and trying to make a living by freelancing along with my studies.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -102,12 +99,12 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <li class="resume-tab-list-single-item">
                                         <div class="content">
                                             <div class="left">
-                                                <span class="year">2012 - 2014</span>
+                                                <span class="year">2020 - 2021</span>
                                             </div>
                                             <div class="right">
-                                                <h3 class="title">Masters of Business Administration </h3>
-                                                <span class="institute-name">University of California, Berkeley</span>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been indus dard dummy text ever since the 1500 when an uniknown prnter took galley of type and scrambled make specimen book has not only five centuries the into electronic.</p>
+                                                <h3 class="title">Advanced WordPress Development</h3>
+                                                <span class="institute-name">Sorobindu, Dinajpur</span>
+                                                <p>By completing a course on advanced wordpress from Sorobindu through Germ I can create any type of website with wordpress like e-commerce blog news paper etc.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -116,12 +113,12 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <li class="resume-tab-list-single-item">
                                         <div class="content">
                                             <div class="left">
-                                                <span class="year">2015 - 2018</span>
+                                                <span class="year">2023 - 2024</span>
                                             </div>
                                             <div class="right">
-                                                <h3 class="title">Bachelor of Graphic Arts</h3>
-                                                <span class="institute-name">University of California, Berkeley</span>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been indus dard dummy text ever since the 1500 when an uniknown prnter took galley of type and scrambled make specimen book has not only five centuries the into electronic.</p>
+                                                <h3 class="title">Advanced Laravel</h3>
+                                                <span class="institute-name">Ostad, Dhaka</span>
+                                                <p>From Ustad, I completed the course of Lagban language on programming, now I can create any type of website through Laravel and I am working in Technuxt company with Laravel.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -134,12 +131,12 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <li class="resume-tab-list-single-item">
                                         <div class="content">
                                             <div class="left">
-                                                <span class="year">2016 - 2018</span>
+                                                <span class="year">2021 - At Present</span>
                                             </div>
                                             <div class="right">
                                                 <h3 class="title">Web Designer</h3>
-                                                <span class="institute-name">Graphic Dev</span>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been indus dard dummy text ever since the 1500 when an uniknown prnter took galley of type and scrambled make specimen book has not only five centuries the into electronic.</p>
+                                                <span class="institute-name">Fiverr</span>
+                                                <p>As a web designer I have been working in fiber since 2021 till now I have about three years of experience here</p>
                                             </div>
                                         </div>
                                     </li>
@@ -148,30 +145,17 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <li class="resume-tab-list-single-item">
                                         <div class="content">
                                             <div class="left">
-                                                <span class="year">2018 - 2019</span>
+                                                <span class="year">2024 - At Present</span>
                                             </div>
                                             <div class="right">
-                                                <h3 class="title">Junior Web Developer</h3>
-                                                <span class="institute-name">Acme Lab</span>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been indus dard dummy text ever since the 1500 when an uniknown prnter took galley of type and scrambled make specimen book has not only five centuries the into electronic.</p>
+                                                <h3 class="title">Laravel Web Developer</h3>
+                                                <span class="institute-name">Technuxt</span>
+                                                <p>At TEchnuxt I am engaged as a Laravel developer and I am the chip executive officer there</p>
                                             </div>
                                         </div>
                                     </li>
                                     <!-- End Resume Tab List Single Item -->
-                                    <!-- Start Resume Tab List Single Item -->
-                                    <li class="resume-tab-list-single-item">
-                                        <div class="content">
-                                            <div class="left">
-                                                <span class="year">2019 - 2020</span>
-                                            </div>
-                                            <div class="right">
-                                                <h3 class="title">Senior Web Developer</h3>
-                                                <span class="institute-name">Devtwist</span>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been indus dard dummy text ever since the 1500 when an uniknown prnter took galley of type and scrambled make specimen book has not only five centuries the into electronic.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- End Resume Tab List Single Item -->
+
                                 </ul>
                             </div>
                         </div>
@@ -192,10 +176,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Counterup Single Item -->
                     <div class="counterup-single-item">
                         <div class="icon">
-                            <img src="assets/images/icon/counterup-icon-1.webp" alt="">
+                            <img src="{{asset('assets/images/icon/counterup-icon-1.webp')}}" alt="Best web developer in Bangladesh">
                         </div>
                         <div class="content">
-                            <h2 class="number"><span class="counter">2,58</span>+</h2>
+                            <h2 class="number"><span class="counter">20</span>+</h2>
                             <span class="text">Happy Clients</span>
                         </div>
                     </div>
@@ -205,10 +189,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Counterup Single Item -->
                     <div class="counterup-single-item">
                         <div class="icon">
-                            <img src="assets/images/icon/counterup-icon-2.webp" alt="">
+                            <img src="{{asset('assets/images/icon/counterup-icon-2.webp')}}" alt="Best laravel developer">
                         </div>
                         <div class="content">
-                            <h2 class="number"><span class="counter">590</span>K</h2>
+                            <h2 class="number"><span class="counter">200</span>H</h2>
                             <span class="text">Project Complete</span>
                         </div>
                     </div>
@@ -218,10 +202,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                     <!-- Start Counterup Single Item -->
                     <div class="counterup-single-item">
                         <div class="icon">
-                            <img src="assets/images/icon/counterup-icon-3.webp" alt="">
+                            <img src="{{asset('assets/images/icon/counterup-icon-3.webp')}}" alt="Laravel developer">
                         </div>
                         <div class="content">
-                            <h2 class="number"><span class="counter">28</span>+</h2>
+                            <h2 class="number"><span class="counter">3</span>+</h2>
                             <span class="text">Years of Experience</span>
                         </div>
                     </div>
@@ -237,111 +221,19 @@ experience. My first goal is to satisfy the client 100%. I will work according t
 <div class="testimonial-display-section section-gap-tb-165 section-bg">
     <div class="testimonial-display-box d-flex flex-column align-items-center d-xl-block pos-relative">
         <div class="container overflow-hidden">
-            <div class="row">
-                <div class="col d-xl-flex justify-content-xl-end">
-                    <!-- Start Section Content -->
-                    <div class="section-content pos-relative">
-                        <span class="section-tag">Testimonial</span>
-                        <h2 class="section-title">Satisfied Clients Say</h2>
-                    </div>
-                    <!-- End Section Content -->
-                </div>
-            </div>
 
             <div class="testimonial-display-wrapper">
                 <div class="row">
                     <div class="col-12">
                         <div class="testimonial-display-slider">
-                            <!-- Swiper -->
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <!-- Start testimonial Slider Single Item -->
-                                    <div class="testimonial-slider-single-item swiper-slide">
-                                        <div class="inner-shape inner-shape-top-right"></div>
-                                        <div class="content">
-                                            <span class="icon">“</span>
-                                            <p class="text">Lorem Ipsum simpy dummy
-                                                text of the printing and types
-                                                industry has been the industr
-                                                standard dummy.</p>
-                                            <div class="info">
-                                                <div class="author">
-                                                    <h4 class="name">Raleigh Friend</h4>
-                                                    <span class="designation">CEO, Seoly</span>
-                                                </div>
-                                                <ul class="review">
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="blank"><i class="fa-regular fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End testimonial Slider Single Item -->
-                                    <!-- Start testimonial Slider Single Item -->
-                                    <div class="testimonial-slider-single-item swiper-slide">
-                                        <div class="inner-shape inner-shape-top-right"></div>
-                                        <div class="content">
-                                            <span class="icon">“</span>
-                                            <p class="text">Lorem Ipsum simpy dummy
-                                                text of the printing and types
-                                                industry has been the industr
-                                                standard dummy.</p>
-                                            <div class="info">
-                                                <div class="author">
-                                                    <h4 class="name">Raleigh Friend</h4>
-                                                    <span class="designation">CEO, Seoly</span>
-                                                </div>
-                                                <ul class="review">
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="blank"><i class="fa-regular fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End testimonial Slider Single Item -->
-                                    <!-- Start testimonial Slider Single Item -->
-                                    <div class="testimonial-slider-single-item swiper-slide">
-                                        <div class="inner-shape inner-shape-top-right"></div>
-                                        <div class="content">
-                                            <span class="icon">“</span>
-                                            <p class="text">Lorem Ipsum simpy dummy
-                                                text of the printing and types
-                                                industry has been the industr
-                                                standard dummy.</p>
-                                            <div class="info">
-                                                <div class="author">
-                                                    <h4 class="name">Raleigh Friend</h4>
-                                                    <span class="designation">CEO, Seoly</span>
-                                                </div>
-                                                <ul class="review">
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                    <li class="blank"><i class="fa-regular fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End testimonial Slider Single Item -->
-                                </div>
-                            </div>
+                            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                            <div class="elfsight-app-2fb3124c-c231-4e8f-998d-2fc8d29d45b4" data-elfsight-app-lazy></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="default-nav-style mt-5 mt-xl-0">
-            <!-- If we need navigation buttons -->
-            <div class="slider-button button-prev"><i class="fa-solid fa-angles-left"></i></div>
-            <div class="slider-button button-next"><i class="fa-solid fa-angles-right"></i></div>
-        </div>
+
     </div>
 </div>
 <!-- ...::: End Testimonial Display Section :::... -->
@@ -370,37 +262,17 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/1.webp" alt="">
-                                            <img src="assets/images/company-logo/1.webp" alt="">
-                                        </a>
-                                    </div>
+                                    @foreach ($companies as  $company )
+                                         <div class="company-logo-single-item swiper-slide">
+                                            <a href="{{ $company->url }}" class="image">
+                                                <img src="{{ asset('uploads/companies/').'/'.$company->image }}" alt="Wordpress expert">
+                                                <img src="{{ asset('uploads/companies/').'/'.$company->image }}" alt="wordpress expert">
+                                                <h2 class="section-tag">{{ $company->name }}</h2>
+                                            </a>
+                                        </div>
+                                        @endforeach
                                     <!-- End Company Logo Slider Single Item -->
-                                    <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/2.webp" alt="">
-                                            <img src="assets/images/company-logo/2.webp" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- End Company Logo Slider Single Item -->
-                                    <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/3.webp" alt="">
-                                            <img src="assets/images/company-logo/3.webp" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- End Company Logo Slider Single Item -->
-                                    <!-- Start Company Logo Slider Single Item -->
-                                    <div class="company-logo-single-item swiper-slide">
-                                        <a href="#" class="image">
-                                            <img src="assets/images/company-logo/4.webp" alt="">
-                                            <img src="assets/images/company-logo/4.webp" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- End Company Logo Slider Single Item -->
+
                                 </div>
                             </div>
                         </div>

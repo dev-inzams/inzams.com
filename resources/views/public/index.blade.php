@@ -2,8 +2,8 @@
 @section('title', 'Developer InZamS')
 @section('description', 'Hi there, I am Inzams, and I am an experienced WordPress Web Font end Developer, with 2+ years of
 experience. My first goal is to satisfy the client 100%. I will work according to all your requirements.')
+@section('keywords', 'wordpress developer, laravel developer, best fiverr wordpress expert, best freelancer in bangladesh, best wordpress experts')
 @section('main')
-
 
 
     <!-- ...::: Start Hero Section :::... -->
@@ -226,10 +226,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                         <!-- Start Counterup Single Item -->
                         <div class="counterup-single-item">
                             <div class="icon">
-                                <img src="assets/images/icon/counterup-icon-1.webp" alt="">
+                                <img src="{{asset('assets/images/icon/counterup-icon-1.webp')}}" alt="">
                             </div>
                             <div class="content">
-                                <h2 class="number"><span class="counter">2,58</span>+</h2>
+                                <h2 class="number"><span class="counter">20</span>+</h2>
                                 <span class="text">Happy Clients</span>
                             </div>
                         </div>
@@ -239,10 +239,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                         <!-- Start Counterup Single Item -->
                         <div class="counterup-single-item">
                             <div class="icon">
-                                <img src="assets/images/icon/counterup-icon-2.webp" alt="">
+                                <img src="{{asset('assets/images/icon/counterup-icon-2.webp')}}" alt="">
                             </div>
                             <div class="content">
-                                <h2 class="number"><span class="counter">590</span>K</h2>
+                                <h2 class="number"><span class="counter">200</span>H</h2>
                                 <span class="text">Project Complete</span>
                             </div>
                         </div>
@@ -252,10 +252,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                         <!-- Start Counterup Single Item -->
                         <div class="counterup-single-item">
                             <div class="icon">
-                                <img src="assets/images/icon/counterup-icon-3.webp" alt="">
+                                <img src="{{asset('assets/images/icon/counterup-icon-3.webp')}}" alt="">
                             </div>
                             <div class="content">
-                                <h2 class="number"><span class="counter">28</span>+</h2>
+                                <h2 class="number"><span class="counter">3</span>+</h2>
                                 <span class="text">Years of Experience</span>
                             </div>
                         </div>
@@ -335,114 +335,24 @@ experience. My first goal is to satisfy the client 100%. I will work according t
     <div class="testimonial-display-section section-gap-tb-165 section-bg">
         <div class="testimonial-display-box d-flex flex-column align-items-center d-xl-block pos-relative">
             <div class="container overflow-hidden">
-                <div class="row">
-                    <div class="col d-xl-flex justify-content-xl-end">
-                        <!-- Start Section Content -->
-                        <div class="section-content pos-relative">
-                            <span class="section-tag">Testimonial</span>
-                            <h2 class="section-title">Satisfied Clients Say</h2>
-                        </div>
-                        <!-- End Section Content -->
-                    </div>
-                </div>
 
                 <div class="testimonial-display-wrapper">
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-display-slider">
-                                <!-- Swiper -->
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <!-- Start testimonial Slider Single Item -->
-                                        <div class="testimonial-slider-single-item swiper-slide">
-                                            <div class="inner-shape inner-shape-top-right"></div>
-                                            <div class="content">
-                                                <span class="icon">“</span>
-                                                <p class="text">Lorem Ipsum simpy dummy
-                                                    text of the printing and types
-                                                    industry has been the industr
-                                                    standard dummy.</p>
-                                                <div class="info">
-                                                    <div class="author">
-                                                        <h4 class="name">Raleigh Friend</h4>
-                                                        <span class="designation">CEO, Seoly</span>
-                                                    </div>
-                                                    <ul class="review">
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="blank"><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End testimonial Slider Single Item -->
-                                        <!-- Start testimonial Slider Single Item -->
-                                        <div class="testimonial-slider-single-item swiper-slide">
-                                            <div class="inner-shape inner-shape-top-right"></div>
-                                            <div class="content">
-                                                <span class="icon">“</span>
-                                                <p class="text">Lorem Ipsum simpy dummy
-                                                    text of the printing and types
-                                                    industry has been the industr
-                                                    standard dummy.</p>
-                                                <div class="info">
-                                                    <div class="author">
-                                                        <h4 class="name">Raleigh Friend</h4>
-                                                        <span class="designation">CEO, Seoly</span>
-                                                    </div>
-                                                    <ul class="review">
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="blank"><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End testimonial Slider Single Item -->
-                                        <!-- Start testimonial Slider Single Item -->
-                                        <div class="testimonial-slider-single-item swiper-slide">
-                                            <div class="inner-shape inner-shape-top-right"></div>
-                                            <div class="content">
-                                                <span class="icon">“</span>
-                                                <p class="text">Lorem Ipsum simpy dummy
-                                                    text of the printing and types
-                                                    industry has been the industr
-                                                    standard dummy.</p>
-                                                <div class="info">
-                                                    <div class="author">
-                                                        <h4 class="name">Raleigh Friend</h4>
-                                                        <span class="designation">CEO, Seoly</span>
-                                                    </div>
-                                                    <ul class="review">
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="fill"><i class="fa-solid fa-star"></i></li>
-                                                        <li class="blank"><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End testimonial Slider Single Item -->
-                                    </div>
-                                </div>
+                                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                                <div class="elfsight-app-2fb3124c-c231-4e8f-998d-2fc8d29d45b4" data-elfsight-app-lazy></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="default-nav-style mt-5 mt-xl-0">
-                <!-- If we need navigation buttons -->
-                <div class="slider-button button-prev"><i class="fa-solid fa-angles-left"></i></div>
-                <div class="slider-button button-next"><i class="fa-solid fa-angles-right"></i></div>
-            </div>
+
         </div>
     </div>
     <!-- ...::: End Testimonial Display Section :::... -->
+
+
 
     <!-- ...::: Start Company Logo Display Section :::... -->
     <div class="company-logo-display section-mt-165 ">
@@ -468,37 +378,18 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                         <!-- Start Company Logo Slider Single Item -->
-                                        <div class="company-logo-single-item swiper-slide">
-                                            <a href="#" class="image">
-                                                <img src="assets/images/company-logo/1.webp" alt="">
-                                                <img src="assets/images/company-logo/1.webp" alt="">
+                                        @foreach ($companies as  $company )
+                                         <div class="company-logo-single-item swiper-slide">
+                                            <a href="{{ $company->url }}" class="image">
+                                                <img src="{{ asset('uploads/companies/').'/'.$company->image }}" alt="Wordpress expert">
+                                                <img src="{{ asset('uploads/companies/').'/'.$company->image }}" alt="wordpress expert">
+                                                <h2 class="section-tag">{{ $company->name }}</h2>
                                             </a>
                                         </div>
+                                        @endforeach
+
                                         <!-- End Company Logo Slider Single Item -->
-                                        <!-- Start Company Logo Slider Single Item -->
-                                        <div class="company-logo-single-item swiper-slide">
-                                            <a href="#" class="image">
-                                                <img src="assets/images/company-logo/2.webp" alt="">
-                                                <img src="assets/images/company-logo/2.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <!-- End Company Logo Slider Single Item -->
-                                        <!-- Start Company Logo Slider Single Item -->
-                                        <div class="company-logo-single-item swiper-slide">
-                                            <a href="#" class="image">
-                                                <img src="assets/images/company-logo/3.webp" alt="">
-                                                <img src="assets/images/company-logo/3.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <!-- End Company Logo Slider Single Item -->
-                                        <!-- Start Company Logo Slider Single Item -->
-                                        <div class="company-logo-single-item swiper-slide">
-                                            <a href="#" class="image">
-                                                <img src="assets/images/company-logo/4.webp" alt="">
-                                                <img src="assets/images/company-logo/4.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <!-- End Company Logo Slider Single Item -->
+
                                     </div>
                                 </div>
                             </div>
@@ -532,14 +423,14 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                             <!-- Start Blog Feed Single Item -->
                             <div class="blog-feed-single-item">
                                 <div class="inner-shape inner-shape-top-right"></div>
-                                <a href="blog-details-sidebar-left.html" class="image">
+                                <a href="{{route('blog-details',$blog->slug)}}" class="image">
                                     <img src="{{ asset('uploads/blogs/').'/'.$blog->image }}" alt="{{__($blog->title)}}">
                                 </a>
                                 <div class="content-box">
                                     <div class="content">
                                         <div class="post-meta">
-                                            <a href="#" class="catagory">{{__($blog->blogCategory->title)}}</a>
-                                            <a href="#" class="date">{{ $blog->created_at }}</a>
+                                            <a href="{{route('blog-archive',$blog->blogCategory->id)}}" class="catagory">{{__($blog->blogCategory->title)}}</a>
+                                            <span class="date">{{ $blog->created_at }}</span>
                                         </div>
                                         <h4 class="title"><a href="{{route('blog-details',$blog->slug)}}">{{__($blog->title)}}</a></h4>
                                     </div>
@@ -558,6 +449,25 @@ experience. My first goal is to satisfy the client 100%. I will work according t
     <!-- ...::: End Blog Feed Display Section :::... -->
 
 
+  <!-- Modal -->
+  <div style="{{ session()->has('success') ? 'display: block' : '' }}" class="modal fade {{ session()->has('success') ? 'show' : '' }}" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="{{asset('images/subscribe-done.webp')}}" alt="Bangladeshi best freelancer is Developer Inzams">
+        </div>
+        <div class="modal-footer">
+          <button id="done" type="button" class="btn btn-danger" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<script>
+    const done = document.getElementById('done');
+    done.addEventListener('click', () => {
+        window.location.reload();
+    });
+</script>
 
 @endsection

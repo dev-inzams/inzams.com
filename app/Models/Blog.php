@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Reach;
+use App\Models\Comment;
 use App\Models\BlogCategory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -30,6 +31,10 @@ class Blog extends Model {
 
     public function user() {
         return $this->belongsTo( User::class );
+    }
+
+    public function comments() {
+        return $this->belongsTo( Comment::class );
     }
 
     // Post.php

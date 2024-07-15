@@ -30,6 +30,7 @@ return new class extends Migration
             $table->unsignedBigInteger('blog_category_id');
             $table->foreign('blog_category_id')->references('id')->on('blog_categories');
 
+            $table->integer('comments')->default('0');
 
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

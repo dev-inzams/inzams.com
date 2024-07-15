@@ -17,10 +17,18 @@
             <div class="footer-top-wrapper text-center">
                 <div class="row">
                     <div class="col-12">
-                        <form action="#" class="footer-newsletter">
-                            <input type="email" placeholder="demo@example.com">
-                            <button class="submit-btn" type="submit">Subscribe Now</button>
+                        <form method="POST" action="{{route('subscriber.store')}}" class="footer-newsletter">
+                            @csrf
+                            <input type="email" value="demo@example.com" name="email">
+                            <div class="mb-6 mt-6">
+                                <div class="default-form-group">
+                                    <div class="g-recaptcha" data-sitekey="{{config('services.recaptcha.site_key')}}"></div>
+                                </div>
+                            </div>
+
+                            <input class="submit-btn" type="submit" value="Subscribe">
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -34,7 +42,7 @@
                     <div class="footer-single-info">
                         <a href="tel:+0123456789" class="info-box">
                             <span class="icon"><i class="fa-solid fa-phone"></i></span>
-                            <span class="text">0123456789</span>
+                            <span class="text">017 04 519296</span>
                         </a>
                     </div>
                     <!-- Start Single Footer Info -->
@@ -42,9 +50,9 @@
                 <div class="col-auto mb-5">
                     <!-- Start Single Footer Info -->
                     <div class="footer-single-info">
-                        <a href="mailto:demo@example.com" class="info-box">
+                        <a href="mailto:inzams.hp@gmail.com" class="info-box">
                             <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                            <span class="text">demo@example.com</span>
+                            <span class="text">inzams.hp@gmail.com</span>
                         </a>
                     </div>
                     <!-- Start Single Footer Info -->
@@ -53,9 +61,9 @@
                     <!-- Start Single Footer Info -->
                     <div class="footer-single-info">
                         <ul class="social-link">
-                            <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href="https://www.example.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.facebook.com/developerinzams" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/c/developerinzams" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/inzams/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                         </ul>
                     </div>
                     <!-- Start Single Footer Info -->
@@ -68,13 +76,13 @@
             <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
                 <div class="col-auto">
                     <div class="footer-copyright">
-                        <p class="copyright-text">&copy; 2021 <a href="index.html">InZam'S</a> Made with <i class="fa-solid fa-heart"></i> by <a href="https://inzams.com/" target="_blank">Developer InZam'S</a> </p>
+                        <p class="copyright-text">&copy; 2021 All rights reserved <a href="index.html"><i class="fa-solid fa-heart"></i> InZam'S</a></p>
                     </div>
                 </div>
                 <div class="col-auto">
-                    <a href="index.html" class="footer-logo">
+                    <a href="{{ route('home')}}" class="footer-logo">
                         <div class="logo">
-                            <img src="assets/images/logo.webp" alt="">
+                            <img src="{{asset('assets/images/logo.png')}}" alt="developerinzams">
                         </div>
                     </a>
                 </div>

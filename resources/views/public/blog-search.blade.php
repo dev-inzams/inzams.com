@@ -13,10 +13,10 @@ experience. My first goal is to satisfy the client 100%. I will work according t
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="title">Blog List</h2>
+                        <h2 class="title">{{__($key)}}</h2>
                         <ul class="breadcrumb-link">
-                            <li><a href="{{ route('home') }}">Home</a></li>
-                            <li class="active" aria-current="page">Blog</li>
+                            <li><a href="{{ route('blogs') }}">Blog List</a></li>
+                            <li class="active" aria-current="page">{{__($key)}}</li>
                         </ul>
                     </div>
                 </div>
@@ -131,17 +131,7 @@ experience. My first goal is to satisfy the client 100%. I will work according t
                             <div class="row">
                                 <div class="col-12">
                                     <ul class="pagination-nav-list">
-                                        {{-- make pagination here --}}
-                                        {{-- {{ $blogs->links() }} --}}
-
                                         <li class="prev"><a href="{{$blogs->previousPageUrl()}}"><i class="fa-solid fa-angles-left"></i></a></li>
-                                            {{-- pagination loop --}}
-                                            {{-- @foreach ($blogs as $blog)
-                                                <li><a href="{{$blogs->url($blog->pageNumber)}}">{{$blog->pageNumber}}</a></li>
-                                            @endforeach --}}
-                                        {{-- <li><a href="#">1</a></li>
-                                        <li class="active"><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li> --}}
                                         <li class="next"><a href="{{$blogs->nextPageUrl()}}"><i class="fa-solid fa-angles-right"></i></a></li>
                                     </ul>
                                 </div>

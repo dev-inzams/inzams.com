@@ -18,7 +18,7 @@
             <a href="{{route('dashboard')}}" class="mb-1 nav-item nav-link {{Route::currentRouteName() == 'dashboard' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <a href="{{route('dashboard.projects')}}" class="mb-1 nav-item nav-link {{Route::currentRouteName() == 'dashboard.projects' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Projects</a>
             <a href="{{route('dashboard.blogs')}}" class="mb-1 nav-item nav-link {{Route::currentRouteName() == 'dashboard.blogs' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Blogs</a>
-
+            <a href="{{route('dashboard.companies')}}" class="mb-1 nav-item nav-link {{Route::currentRouteName() == 'dashboard.companies' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Companies</a>
 
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
