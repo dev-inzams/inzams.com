@@ -68,7 +68,7 @@
                     <div class="bg-secondary text-center rounded p-4">
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <h6 class="mb-0">Salse & Revenue</h6>
-                            <a href="">Show All</a>
+                            <a href="">Show </a>
                         </div>
                         <canvas id="salse-revenue"></canvas>
                     </div>

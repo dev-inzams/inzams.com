@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -84,6 +84,11 @@
                     label: "AU",
                     data: [12, 25, 45, 55, 65, 70, 60],
                     backgroundColor: "rgba(235, 22, 22, .3)"
+                },
+                {
+                    label: "BD",
+                    data: [12, 25, 45, 55, 65, 70, 60],
+                    backgroundColor: "rgba(235, 22, 22, .3)"
                 }
             ]
             },
@@ -117,7 +122,7 @@
             responsive: true
         }
     });
-    
+
 
 
     // Single Line Chart
@@ -207,6 +212,6 @@
         }
     });
 
-    
+
 })(jQuery);
 
